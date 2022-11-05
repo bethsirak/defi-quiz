@@ -1,0 +1,72 @@
+print("Hello  welcome to the game! :)")
+
+playing = input("Do you want to play the game? ")
+
+# Does not equal !=
+
+if playing.lower() != "yes":
+    quit()
+Score = 0
+print("Okay, lets get started!")
+
+print("The roles of the game are as follows; "
+      "you will be asked questions about crypto for each question you answer right in your first attempt you are awarded 1 point"
+      " if you get it wrong you will have 1 more chance to win 1/2 a point"
+      " harder questions worth 2 points "
+      " be sure to check for spelling")
+
+answer = input("What does DeFi stand for? ").lower()
+if answer == "decentralised finance":
+    print("Yes, you're correct! ")
+    Score += 1
+else:
+    answer = input("Eh ehh, lets try again - What does DeFi stand for? ").lower()
+
+    if answer == "decentralised finance":
+        print("Yes, you're correct! ")
+        Score += 1
+    else:
+        print("yikes, lets move on ")
+
+answer = input("What does DEX stand for? ").lower()
+if answer == "decentralised exchange":
+    print("Yes, you're correct! ")
+    Score += 1
+else:
+    answer = input("Eh ehh, lets try again - What does DEX stand for? ").lower()
+    if answer == "decentralised exchange":
+        print("Yes, you're correct! ")
+        Score += 1
+    else:
+        print("yikes, lets move on ")
+
+answer = input("What does OTC stand for? ").lower()
+if answer == "over the counter":
+    print("Yes, you're correct! ")
+    Score += 1
+else:
+    answer = input("Eh ehh, lets try again - What does OTC stand for? ").lower()
+
+    if answer == "over the counter":
+        print("Yes, you're correct! ")
+        Score += 1
+    else:
+        print("yikes, lets move on ")
+
+print("Okay, lets up the difficulty, this is for 2pts")
+
+answer = input("Ethereum moved from a proof of work model to a proof of [x] ").lower()
+if answer == "stake":
+    print("Yes, you're correct! ")
+    Score += 2
+else:
+    answer = input("Eh ehh, lets try again - Ethereum is now a proof of ...... model? ").lower()
+
+    if answer == "stake":
+        print("Nice one! ")
+        Score += 2
+    else:
+        print("Incorrect")
+
+print(f"You got {Score} questions correct!")
+print(f"Which is {(Score/5)*100}%")
